@@ -1,0 +1,99 @@
+.content {
+    padding-bottom: 36px;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    gap: 12px;
+
+    @media (max-width: 743px) {
+        padding: 24px 0;
+        min-height: 100vh;
+    }
+}
+.row {
+    display: flex;
+    gap: 12px;
+    flex: 1 1 auto;
+
+    @media (max-width: 1300px) {
+        flex: 0 1 auto;
+        flex-direction: column;
+    }
+    @media (max-width: 1023px) {
+        flex: 1 1 auto;
+    }
+    @media (max-width: 743px) {
+        gap: 0;
+    }
+}
+.downloadSection {
+    width: 600px;
+    flex: 0 0 auto;
+    @media (max-width: 1300px) {
+        flex: 1 1 auto;
+    }
+    @media (max-width: 1023px) {
+        width: auto;
+        flex: 0 1 auto;
+    }
+    @media (max-width: 743px) {
+        height: 426px;
+        flex: 0 0 auto;
+        transition: height 0.3s;
+
+        .isOnScroll & {
+            height: 0;
+            overflow: hidden;
+        }
+    }
+}
+.video {
+    &.videoTablet {
+        display: none;
+        @media (max-width: 1300px) {
+            display: block;
+        }
+        @media (max-width: 1023px) {
+            display: none;
+        }
+    }
+    flex: 1 1 auto;
+    @media (max-width: 1300px) {
+        display: none;
+    }
+    @media (max-width: 1023px) {
+        display: block;
+        height: 377px;
+    }
+    @media (max-width: 743px) {
+        height: auto;
+        flex: 1 1 auto;
+        margin-top: 12px;
+
+        .isOnScroll & {
+            margin-top: 0;
+        }
+    }
+}
+.sidebar {
+    width: 204px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media (max-width: 1300px) {
+        width: 100%;
+        flex-direction: row;
+    }
+    @media (max-width: 743px) {
+        transition: height 0.3s;
+        height: 0;
+        overflow: hidden;
+        margin-top: 0;
+
+        .isOnScroll & {
+            height: 180px;
+            margin-top: 12px;
+        }
+    }
+}

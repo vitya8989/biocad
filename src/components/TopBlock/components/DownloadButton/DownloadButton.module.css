@@ -1,0 +1,63 @@
+.root {
+    padding: 16px 24px 14px 54px;
+    border-radius: 36px;
+    background: #08050D;
+    position: relative;
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 743px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        gap: 6px;
+    }
+
+    &:hover {
+        @media (min-width: 744px) {
+            & .before {
+                opacity: 0;
+            }
+            & .after {
+                opacity: 1;
+            }
+            & .text {
+                left: -30px;
+            }
+        }
+    }
+}
+.before,
+.after {
+    position: absolute;
+    width: 24px;
+    top: 12px;
+    transition: opacity 0.2s;
+
+    & img {
+        width: 100%;
+    }
+}
+.before {
+    left: 24px;
+
+    @media (max-width: 743px) {
+        position: static;
+    }
+}
+.after {
+    right: 24px;
+    opacity: 0;
+}
+.text {
+    color: #FFF;
+    font-size: 14px;
+    line-height: 18px;
+    left: 0;
+    transition: left 0.3s;
+    position: relative;
+
+    @media (max-width: 743px) {
+        margin-top: 2px;
+    }
+}

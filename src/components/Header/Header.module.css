@@ -1,0 +1,16 @@
+.header {
+    padding: 36px 0 24px;
+
+    @media (max-width: 743px) {
+        padding: 0;
+    }
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1023px) {
+        padding-left: 84px;
+    }
+}
