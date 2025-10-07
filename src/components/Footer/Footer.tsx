@@ -1,5 +1,4 @@
 import {MainData} from "@/types";
-import {DownloadAppLink} from "@/components/DownloadAppLink/DownloadAppLink";
 import Link from "next/link";
 
 import styles from './Footer.module.css';
