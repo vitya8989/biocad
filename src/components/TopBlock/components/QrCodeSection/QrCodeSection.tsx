@@ -26,13 +26,15 @@ export function QrCodeSection({data, icon}: QrCodeSectionProps) {
                 </div>
             </div>
             <div className={styles.qrImg}>
-                <Image
-                    src={data.url}
-                    alt=""
-                    width={120}
-                    height={120}
-                    priority
-                />
+                {!!data.url && (
+                    <Image
+                        src={data.url}
+                        alt=""
+                        width={120}
+                        height={120}
+                        priority
+                    />
+                )}
             </div>
         </div>
     )

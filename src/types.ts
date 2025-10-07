@@ -49,7 +49,7 @@ export interface MenuData {
     menu: MenuItem[];
 }
 
-export interface SliderItem {
+export interface SliderItemType {
     id: number;
     photo: string;
     name: string;
@@ -62,5 +62,5 @@ export interface SliderData {
     title: string;
     description: string;
     count: number;
-    data: SliderItem[];
+    data: SliderItemType[];
 }

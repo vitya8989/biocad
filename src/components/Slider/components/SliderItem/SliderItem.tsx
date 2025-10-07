@@ -1,10 +1,9 @@
-import {SliderItem} from "@/types";
+import {SliderItemType} from "@/types";
 import Image from 'next/image'
 import styles from "./SliderItem.module.css";
 
-
 interface SliderItemProps {
-    slide: SliderItem;
+    slide: SliderItemType;
 }
 
 export function SliderItem({slide}: SliderItemProps) {
